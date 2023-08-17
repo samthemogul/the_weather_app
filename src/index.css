@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root {
+    --background-dark: #0B131E;
+    --background-dark-medium: #131a25;
+    --background-dark-container: #202B3B;
+    --dark-ash-text: #DCDCDC;
+    --bright: #fff;
+    --dark-ash: #707070;
+    --light-ash-text: #979DA5;
+    --background-light-container: #E7E8E9;
+    --background-light: #F5F5F5;
+    --dark: #242F3F;
+    --sweet : #FDB82C;
+    --font-general: "Poppins", sans-serif;
+    --box-shadow: 0 2rem 3rem var(--dark-ash);
+    --border-radius : 1.2rem; 
+    --border-radius-curve: 2rem;
+}
+html {
+    font-size: 14px;
+}
+
+body {
+    background: var(--background-dark);
+    font-family: var(--font-general);
+    font-size: 0.88rem;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    overflow-x: hidden;
+}
+h1 {
+  color: var(--bright);
+  font-size: 5rem;
+  font-weight: 600;
+}
+h1.temp {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+.air-value {
+  font-size: 1.5rem;
+}
+.weather-info-text {
+  color: var(--bright);
+  font-size: 1rem;
+}
+.time-temp-value {
+  color: var(--bright);
+  font-size: 1rem;
+}
+h3 {
+  font-size: 0.9rem;
+  color: var(--light-ash-text);
+  font-weight: 400;
+}
+.faint-text {
+  color: var(--dark-ash-text);
+
+}
+.sub-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 1rem 2rem;
+}
+.info-con {
+  background: var(--background-dark-container);
+  width: 100%;
+  border-radius: var(--border-radius);
+  position: relative;
+}

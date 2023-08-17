@@ -1,0 +1,41 @@
+.subb-con {
+    width: 20vw;
+    background: var(--background-dark-container);
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    overflow: auto;
+}
+.weekdays-forecast-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto 2.5rem;
+    margin-top: 2rem;
+}
+.weekday-forecast-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.weekday-forecast-con h3 {
+    color: var(--dark-ash-text);
+    font-weight: 600;
+}
+.weekday-forecast-con .state-weather img {
+    width: 40px;
+    margin-right: 1rem;
+}
+.weekday-forecast-con .state-weather h3 {
+    font-weight: 300;
+    color: var(--dark-ash-text);
+}
+.weekday-forecast-con .state-weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stroke-vertical {
+    width: 100%;
+    height: 1px;
+    background: var(--bright);
+    margin: 1.8rem 0;
+}

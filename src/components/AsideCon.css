@@ -1,0 +1,13 @@
+p {
+    color: white;
+}
+aside {
+    background: var(--background-dark-container);
+    height: 100vh;
+    position: relative;
+}
+  aside div:last-child {
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+}

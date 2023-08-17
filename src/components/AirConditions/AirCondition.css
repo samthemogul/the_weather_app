@@ -1,0 +1,21 @@
+.air-conditioner-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.air-con {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 4rem;
+}
+.air-con .head-air {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.air-con .head-air .span {
+    margin-right: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--dark-ash-text);
+}

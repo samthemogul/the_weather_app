@@ -1,0 +1,9 @@
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+}
+aside .sidebar h3 {
+    font-weight: 500;
+}

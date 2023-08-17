@@ -1,0 +1,15 @@
+.main {
+    display: grid;
+    grid-template-rows: 7% 35% 30% 35%;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+    overflow: auto;
+    padding: 2rem 0;
+}
+.main::-webkit-scrollbar {
+    display: none;
+}
+.main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

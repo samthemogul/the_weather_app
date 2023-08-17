@@ -1,0 +1,29 @@
+
+.time-weather {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 4rem;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+}
+.info-con .time-weather img {
+    width: 50px;
+}
+.info-con .time-weather h3 {
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.info-con .time-weather .time-weather-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.info-con .time-weather .stroke {
+    width: 0.1rem;
+    height: 100px;
+    background: var(--dark-ash);
+}
