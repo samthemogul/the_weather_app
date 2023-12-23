@@ -28,8 +28,8 @@ function MainCon() {
         celcius_fourth: 0,
         celcius_fifth: 0,
         celcius_sixth: 0,
-        images_list: ['','','','','',''],
-        week_temp: [0,0,0,0,0,0,0],
+        images_list: ['/sunny.png','/sunny.png','/sunny.png','/sunny.png','/sunny.png','/sunny.png'],
+        week_temp: [0,0,0,0,0,0],
         week_img_list: ['','','','','',''],
         weather_des: ['','','','','','']
     })
@@ -43,6 +43,7 @@ function MainCon() {
             handleClick();
         }
     }
+
     const handleClick = () => {
         if (name !== "") {
             const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=915054739831c4eb4b5e2916792c1ab4&units=metric`;
@@ -90,37 +91,14 @@ function MainCon() {
                         return "/stormy.png"
                     } 
                 }) 
-                let new_week_temp = foredata.week_temp.map((val, num) => {
-                    return cast.data.list[4 * (2(num) + 1)].main.temp
-                })
-                let new_week_img_list = foredata.week_img_list.map((link, index) => {
-                    if(cast.data.list[4 * (2(index) + 1)].weather[0].main == "Clouds"){
-                        return "/cloudy.png"
-                    } else if (cast.data.list[4 * (2(index) + 1)].weather[0].main == "Clear"){
-                        return "/sunny.png"
-                    } else if (cast.data.list[4 * (2(index) + 1)].weather[0].main == "Rain"){
-                        return "/rainy.png"
-                    } else if (cast.data.list[4 * (2(index) + 1)].weather[0].main == "Drizzle"){
-                        return "/drizzy.png"
-                    } else if (cast.data.list[4 * (2(index) + 1)].weather[0].main == "Mist"){
-                        return "/cloudy-day.png"
-                    } else {
-                        return "/stormy.png"
-                    }  
-                })
-                let new_weather_des = foredata.weather_des.map((wea, a) => {
-                    return cast.data.list[4 * (2(a) + 1)].weather[0].main
-                })
-                setForeData({...foredata, celcius_first: cast.data.list[2].main.temp,
-                celcius_second: cast.data.list[3].main.temp,
-                celcius_third: cast.data.list[4].main.temp,
-                celcius_fourth: cast.data.list[5].main.temp,
-                celcius_fifth: cast.data.list[6].main.temp,
-                celcius_sixth: cast.data.list[7].main.temp,
-                images_list: new_img_list,
-                week_temp: new_week_temp,
-                week_img_list: new_week_img_list,
-                weather_des: new_weather_des
+                
+                setForeData({...foredata, celcius_first: Math.round(cast.data.list[2].main.temp),
+                celcius_second: Math.round(cast.data.list[3].main.temp),
+                celcius_third: Math.round(cast.data.list[4].main.temp),
+                celcius_fourth: Math.round(cast.data.list[5].main.temp),
+                celcius_fifth: Math.round(cast.data.list[6].main.temp),
+                celcius_sixth: Math.round(cast.data.list[7].main.temp),
+                images_list: new_img_list
             })
             .catch( err => console.log(err));
             })
@@ -130,7 +108,6 @@ function MainCon() {
     
    
     
-
     return (
       <div className="main">
         < Searchbar onSearchChange={makeChange} setChange={handleClick} checkEnter={enterKey}/>
